@@ -1,9 +1,25 @@
-# Tick IT!
+# Tic-Tac 🍬
 
-A function which pushes a new task into the queue in order to wait completion of a micro-task before it. It's very convenient for testing:
+A function which pushes a new task into the queue in order to provide convenient way to wait for completion of micro-tasks. It's quite useful for testing.
+
+# How to use?
+
+```
+npm i tic-tac --save-dev
+```
 
 ```ts
-import tick from 'tick-it';
+import tick from 'tic-tac';
+
+class Service {
+  foo(promise) {
+    promise.then(data => this.bar(data));
+  }
+
+  bar(data) {
+    // do stuff
+  }
+}
 
 describe('async module', () => {
   let service;
@@ -14,7 +30,7 @@ describe('async module', () => {
 
   it('should work', async () => {
     const spy = spyOn(service, 'bar');
-    service.bar(Promise.resolve(data));
+    service.foo(Promise.resolve({ foo: 'bar' }));
 
     await tick();
 

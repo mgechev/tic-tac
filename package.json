@@ -1,14 +1,14 @@
 {
-  "name": "tick-it",
+  "name": "tic-tac",
   "version": "1.0.0",
   "description": "Function used for waiting promise completion. Main purpose is testing.",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && cp README.md dist"
+    "build": "tsc && cp README.md package.json dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mgechev/tick-it.git"
+    "url": "git+https://github.com/mgechev/tic-tac.git"
   },
   "keywords": [
     "tick",
@@ -21,9 +21,9 @@
   "author": "Minko Gechev <mgechev@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mgechev/tick-it/issues"
+    "url": "https://github.com/mgechev/tic-tac/issues"
   },
-  "homepage": "https://github.com/mgechev/tick-it#readme",
+  "homepage": "https://github.com/mgechev/tic-tac#readme",
   "devDependencies": {
     "typescript": "^2.6.1"
   }
