@@ -1,1 +1,1 @@
-export default async () => new Promise(resolve => setTimeout(resolve));
+export default () => new Promise(resolve => setTimeout(resolve));
